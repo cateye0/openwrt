@@ -33,7 +33,7 @@
 
 		wps {
 			label = "wps";
-			gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 5 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 	};
@@ -44,13 +44,13 @@
 		led_status: led_0 {
 			function = LED_FUNCTION_POWER;
 			color = <LED_COLOR_ID_RED>;
-			gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
 		};
 
 		led_1 {
 			function = LED_FUNCTION_STATUS;
 			color = <LED_COLOR_ID_WHITE>;
-			gpios = <&gpio 43 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
 		};
 	};
 };
