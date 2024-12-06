@@ -1,0 +1,15 @@
+#!/bin/sh
+
+uci set wireless.radio0.disabled='0'
+uci set wireless.radio0.channel='6'
+uci set wireless.radio0.hwmode='11g'
+uci set wireless.radio0.htmode='HT20'
+
+uci set wireless.default_radio0=wifi-iface
+uci set wireless.default_radio0.device='radio0'
+uci set wireless.default_radio0.network='lan'
+uci set wireless.default_radio0.mode='ap'
+uci set wireless.default_radio0.ssid='OpenWrt'
+uci set wireless.default_radio0.encryption='none'
+
+uci commit wireless
