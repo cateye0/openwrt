@@ -155,7 +155,7 @@ define Device/cudy_re1200-v1
   DEVICE_PACKAGES := kmod-mt7615e kmod-mt7663-firmware-ap
   SUPPORTED_DEVICES += R14
 endef
-TARGET_DEVICES += cudy_tr1200-v1
+TARGET_DEVICES += cudy_re1200-v1
 
 define Device/cudy_tr1200-v1
   IMAGE_SIZE := 15872k
