@@ -147,11 +147,11 @@
 };
 
 &ehci {
-	status = "okay";
+	status = "disabled";
 };
 
 &ohci {
-	status = "okay";
+	status = "disabled";
 };
 
 &pcie {
