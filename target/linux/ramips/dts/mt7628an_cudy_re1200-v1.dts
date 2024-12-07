@@ -38,40 +38,38 @@
 		};
 	};
 
-		leds {
-			compatible = "gpio-leds";
-		
-			led_blue {
-				label = "oem:green:blue";
-				function = LED_FUNCTION_STATUS;
-				gpios = <&gpio 0 GPIO_ACTIVE_LOW>;
-			};
-		
-			led_red {
-				label = "oem:green:red";
-				function = LED_FUNCTION_ERROR;
-				gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
-			};
-		
-			led_pwr {
-				label = "oem:green:pwr";
-				function = LED_FUNCTION_POWER;
-				gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
-			};
-		
-			led_wps {
-				label = "oem:green:wps";
-				function = LED_FUNCTION_WPS;
-				gpios = <&gpio 2 GPIO_ACTIVE_LOW>;
-			};
-		
-			led_lan {
-				label = "oem:green:lan";
-				function = LED_FUNCTION_LAN;
-				gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
-			};
+	leds {
+		compatible = "gpio-leds";
+
+		led_blue {
+			label = "oem:green:blue";
+			function = LED_FUNCTION_STATUS;
+			gpios = <&gpio 0 GPIO_ACTIVE_LOW>;
 		};
 
+		led_red {
+			label = "oem:green:red";
+			function = LED_FUNCTION_ERROR;
+			gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
+		};
+
+		led_pwr {
+			label = "oem:green:pwr";
+			function = LED_FUNCTION_POWER;
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
+		};
+
+		led_wps {
+			label = "oem:green:wps";
+			function = LED_FUNCTION_WPS;
+			gpios = <&gpio 2 GPIO_ACTIVE_LOW>;
+		};
+
+		led_lan {
+			label = "oem:green:lan";
+			function = LED_FUNCTION_LAN;
+			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
+		};
 	};
 };
 
@@ -123,7 +121,7 @@
 			partition@50000 {
 				compatible = "denx,uimage";
 				label = "firmware";
-        reg = <0x50000 0x780000>;
+				reg = <0x50000 0x780000>;
 			};
 
 			partition@fd0000 {
