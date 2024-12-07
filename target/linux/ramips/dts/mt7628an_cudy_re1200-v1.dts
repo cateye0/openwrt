@@ -11,10 +11,10 @@
 	model = "Cudy RE1200 v1";
 
 	aliases {
-		led-boot = &led_blue;
-		led-running = &led_blue;
-		led-failsafe = &led_blue;
-		led-upgrade = &led_blue;
+		led-boot = &led_status;
+		led-running = &led_status;
+		led-failsafe = &led_status;
+		led-upgrade = &led_status;
 		label-mac-device = &ethernet;
 	};
 
@@ -41,33 +41,15 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_blue {
-			label = "oem:green:blue";
-			function = LED_FUNCTION_STATUS;
-			gpios = <&gpio 0 GPIO_ACTIVE_LOW>;
-		};
-
-		led_red {
-			label = "oem:green:red";
-			function = LED_FUNCTION_ERROR;
-			gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
-		};
-
-		led_pwr {
-			label = "oem:green:pwr";
+		led_status: led_0 {
 			function = LED_FUNCTION_POWER;
+			color = <LED_COLOR_ID_RED>;
 			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
 		};
 
-		led_wps {
-			label = "oem:green:wps";
-			function = LED_FUNCTION_WPS;
-			gpios = <&gpio 2 GPIO_ACTIVE_LOW>;
-		};
-
-		led_lan {
-			label = "oem:green:lan";
-			function = LED_FUNCTION_LAN;
+		led_1 {
+			function = LED_FUNCTION_STATUS;
+			color = <LED_COLOR_ID_WHITE>;
 			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
 		};
 	};
@@ -121,7 +103,7 @@
 			partition@50000 {
 				compatible = "denx,uimage";
 				label = "firmware";
-				reg = <0x50000 0x780000>;
+        reg = <0x50000 0x780000>;
 			};
 
 			partition@fd0000 {
