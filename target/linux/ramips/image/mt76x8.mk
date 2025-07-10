@@ -152,6 +152,8 @@ define Device/cudy_re1200-v1
   DEVICE_VENDOR := Cudy
   DEVICE_MODEL := RE1200
   DEVICE_VARIANT := v1
+  DEVICE_TITLE := R14
+  IMAGE_NAME := R14
   DEVICE_PACKAGES := kmod-mt7615e kmod-mt7663-firmware-ap
   SUPPORTED_DEVICES += R14
 endef
