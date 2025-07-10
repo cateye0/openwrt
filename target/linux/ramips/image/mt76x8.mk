@@ -156,6 +156,9 @@ define Device/cudy_re1200-v1
   IMAGE_NAME := R14
   DEVICE_PACKAGES := kmod-mt7615e kmod-mt7663-firmware-ap
   SUPPORTED_DEVICES += R14
+  IMAGES := sysupgrade.bin factory.bin
+  IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | check-size | append-metadata
+  IMAGE/factory.bin := append-kernel | append-rootfs | pad-rootfs | check-size
 endef
 TARGET_DEVICES += cudy_re1200-v1
 
